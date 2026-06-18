@@ -206,7 +206,7 @@
     .about-photo-wrap {
       position: relative;
     }
-    .about-photo-wrap::after {
+    /* .about-photo-wrap::after {
       content: '';
       position: absolute;
       inset: -3px;
@@ -214,11 +214,12 @@
       border: 2px solid var(--green);
       z-index: 0;
       transform: translate(0px, 0px);
-    }
+    } */
     .about-photo {
       width: 100%; aspect-ratio: 1; object-fit: cover;
       border-radius: 14px; position: relative; z-index: 1;
       filter: grayscale(15%);
+      border: 3px solid var(--green);
     }
     .about-badge {
       position: absolute; bottom: -14px; right: -14px; z-index: 2;
