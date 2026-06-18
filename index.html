@@ -333,6 +333,19 @@
       border: 1px solid var(--border); color: #999;
       padding: 0.18rem 0.55rem; border-radius: 4px;
     }
+    .project-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.75rem;
+      margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);
+    }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.78rem; font-weight: 600; color: var(--green);
+      white-space: nowrap; flex-shrink: 0;
+      transition: gap 0.2s;
+    }
+    .project-link:hover { gap: 0.55rem; }
+    .project-link svg { flex-shrink: 0; }
 
     /* ── CONTACT ─────────────────────────────────────────────────────── */
     #contact {
@@ -775,12 +788,15 @@
         <div class="project-type">Shopify 2.0 · Full Redesign</div>
         <div class="project-name">Fancy LEDs</div>
         <p class="project-desc">Complete redesign and rebuild of an Australian LED lighting store. Custom sections, Metafield-driven product pages, and Klaviyo email flows.</p>
-        <div class="project-tags">
-          <span class="project-tag">Liquid</span>
-          <span class="project-tag">Shopify 2.0</span>
-          <span class="project-tag">Klaviyo</span>
-          <span class="project-tag">Figma</span>
-          <span class="project-tag">Tailwind</span>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Liquid</span>
+            <span class="project-tag">Shopify 2.0</span>
+            <span class="project-tag">Klaviyo</span>
+            <span class="project-tag">Figma</span>
+            <span class="project-tag">Tailwind</span>
+          </div>
+          <a href="https://fancyleds.com/" target="_blank" rel="noopener noreferrer" class="project-link">Visit <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
         </div>
       </div>
     </div>
@@ -800,11 +816,14 @@
         <div class="project-type">Shopify · Feature Development</div>
         <div class="project-name">Penshoppe (Golden ABC)</div>
         <p class="project-desc">Built and maintained new features for one of the Philippines' largest fashion retail Shopify stores.</p>
-        <div class="project-tags">
-          <span class="project-tag">Liquid</span>
-          <span class="project-tag">Shopify 2.0</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Figma</span>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Liquid</span>
+            <span class="project-tag">Shopify 2.0</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Figma</span>
+          </div>
+          <a href="https://www.penshoppe.com/" target="_blank" rel="noopener noreferrer" class="project-link">Visit <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
         </div>
       </div>
     </div>
@@ -834,6 +853,32 @@
     <div class="project-card reveal">
       <div class="project-thumb">
         <div class="project-thumb-code">
+          <div><span class="t-tag">{% assign</span> <span class="t-var">lang</span> = <span class="t-str">'de'</span> <span class="t-tag">%}</span></div>
+          <div><span class="t-tag">{% if</span> <span class="t-var">product.metafields</span></div>
+          <div>&nbsp;&nbsp;<span class="t-var">.custom.badge</span> <span class="t-tag">%}</span></div>
+          <div>&nbsp;&nbsp;<span class="t-tag">&lt;span</span> <span class="t-attr">class</span>=<span class="t-str">"badge"</span><span class="t-tag">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-tag">{{</span> <span class="t-var">product.title</span> <span class="t-tag">}}</span></div>
+          <div>&nbsp;&nbsp;<span class="t-tag">&lt;/span&gt;</span></div>
+          <div><span class="t-tag">{% endif %}</span></div>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Shopify 2.0 · Ongoing</div>
+        <div class="project-name">Nostalgic-Art</div>
+        <p class="project-desc">Ongoing theme development for a high-traffic German merchandising brand — custom sections and Liquid templates supporting seasonal campaigns.</p>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Liquid</span>
+            <span class="project-tag">Shopify 2.0</span>
+            <span class="project-tag">JavaScript</span>
+          </div>
+          <a href="https://shop.nostalgic-art.de/" target="_blank" rel="noopener noreferrer" class="project-link">Visit <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-thumb">
+        <div class="project-thumb-code">
           <div><span class="t-comment">// Prophet Exchange</span></div>
           <div><span class="t-attr">import</span> { <span class="t-var">ref</span>, <span class="t-var">computed</span> }</div>
           <div>&nbsp;&nbsp;<span class="t-attr">from</span> <span class="t-str">'vue'</span></div>
@@ -846,12 +891,15 @@
         <div class="project-type">Vue.js / Nuxt · Full-Time</div>
         <div class="project-name">Prophet Exchange</div>
         <p class="project-desc">2.5 years building the front-end of a US sports betting exchange platform — real-time odds UI, user dashboards, and new feature delivery.</p>
-        <div class="project-tags">
-          <span class="project-tag">Vue.js</span>
-          <span class="project-tag">Nuxt</span>
-          <span class="project-tag">Tailwind</span>
-          <span class="project-tag">Figma</span>
-          <span class="project-tag">Zendesk</span>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Vue.js</span>
+            <span class="project-tag">Nuxt</span>
+            <span class="project-tag">Tailwind</span>
+            <span class="project-tag">Figma</span>
+            <span class="project-tag">Zendesk</span>
+          </div>
+          <a href="https://www.prophetx.co/" target="_blank" rel="noopener noreferrer" class="project-link">Visit <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
         </div>
       </div>
     </div>
@@ -915,7 +963,7 @@
       <p class="section-subtitle">Available for Shopify projects, contracts, or full-time remote roles. Response within 24 hours.</p>
       <div class="contact-links">
         <a href="mailto:heindrickdumdum@gmail.com" class="contact-link">
-          <div class="contact-link-icon">✉</div>
+          <div class="contact-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></div>
           <div>
             <div class="contact-link-label">Email</div>
             <div class="contact-link-value">heindrickdumdum@gmail.com</div>
@@ -949,16 +997,16 @@
         <div class="form-row">
           <div class="form-group">
             <label for="fname">First name</label>
-            <input type="text" id="fname" placeholder="Jane" required />
+            <input type="text" id="fname" placeholder="Joan" required />
           </div>
           <div class="form-group">
             <label for="lname">Last name</label>
-            <input type="text" id="lname" placeholder="Smith" required />
+            <input type="text" id="lname" placeholder="Garcia" required />
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="jane@company.com" required />
+          <input type="email" id="email" placeholder="joan@company.com" required />
         </div>
         <div class="form-group">
           <label for="subject">Subject</label>
