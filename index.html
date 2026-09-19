@@ -270,19 +270,13 @@
 
     /* ── EXPERIENCE ──────────────────────────────────────────────────── */
     #experience { background: #0a0a0a; }
-    .exp-tabs {
-      display: flex; gap: 0.5rem; margin-bottom: 2.5rem; flex-wrap: wrap;
+    .exp-group-label {
+      font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600;
+      color: var(--green); text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 1.2rem;
     }
-    .exp-tab {
-      padding: 0.45rem 1rem; border-radius: 6px;
-      font-size: 0.82rem; font-weight: 500; cursor: pointer;
-      border: 1px solid var(--border); color: var(--text-muted);
-      background: transparent; transition: all 0.2s;
-    }
-    .exp-tab.active { background: var(--green); border-color: var(--green); color: #fff; }
-    .exp-tab:hover:not(.active) { border-color: var(--green); color: var(--green); }
-    .exp-list { display: none; flex-direction: column; gap: 1.2rem; }
-    .exp-list.active { display: flex; }
+    .exp-group-label:not(:first-of-type) { margin-top: 2.5rem; }
+    .exp-list { display: flex; flex-direction: column; gap: 1.2rem; }
     .exp-card {
       background: var(--bg-card); border: 1px solid var(--border);
       border-radius: 12px; padding: 1.6rem 1.8rem;
@@ -629,11 +623,7 @@
     <h2 class="section-title">Work Experience</h2>
     <p class="section-subtitle">11 years across agencies, startups, and direct clients — remote and on-site.</p>
   </div>
-  <div class="exp-tabs">
-    <button class="exp-tab active" onclick="switchTab('contract', event)">Contract & Freelance</button>
-    <button class="exp-tab" onclick="switchTab('fulltime', event)">Full-Time</button>
-  </div>
-
+  <p class="exp-group-label reveal">Contract &amp; Freelance</p>
   <div class="exp-list active" id="tab-contract">
     <div class="exp-card reveal">
       <div>
@@ -736,7 +726,8 @@
     </div>
   </div>
 
-  <div class="exp-list" id="tab-fulltime">
+  <p class="exp-group-label reveal">Full-Time</p>
+  <div class="exp-list active" id="tab-fulltime">
     <div class="exp-card reveal">
       <div>
         <div class="exp-role">Frontend Developer</div>
@@ -1196,14 +1187,6 @@ function typeLine() {
   }
 }
 setTimeout(typeLine, 800);
-
-// ── Tab switching ──────────────────────────────────────────────────────────
-function switchTab(tab, event) {
-  document.querySelectorAll('.exp-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.exp-list').forEach(l => l.classList.remove('active'));
-  event.target.classList.add('active');
-  document.getElementById('tab-' + tab).classList.add('active');
-}
 
 // ── Scroll reveal ──────────────────────────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
